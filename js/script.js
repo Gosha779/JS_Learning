@@ -208,8 +208,11 @@ document.querySelector('.google_link').onclick = function (e) {
     alert('Ok Google!');
 
 }
-
-
+let ss = '-10';
+ss = Number.parseInt(ss);
+console.log(ss);
+let kk = ss > -9 ? 5 : 90
+console.log(kk);
 
 
 
