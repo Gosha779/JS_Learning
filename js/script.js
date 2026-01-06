@@ -214,11 +214,6 @@ console.log(ss);
 let kk = ss > -9 ? 5 : 90
 console.log(kk);
 
-
-
-
-
-
 // let ob = { name: "Suzie", age: 23 };
 
 // let arr = ["Apple", "Banana", "Lemon",];
