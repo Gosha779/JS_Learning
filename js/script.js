@@ -208,11 +208,11 @@ document.querySelector('.google_link').onclick = function (e) {
     alert('Ok Google!');
 
 }
-let ss = '-10';
-ss = Number.parseInt(ss);
+let ss = null;
+//ss = Number.parseInt(ss);
 console.log(ss);
-let kk = ss > -9 ? 5 : 90
-console.log(kk);
+let kk = ss > -91 ? null : 0
+console.log(kk ?? ss ?? "Another");// in react!!!
 
 // let ob = { name: "Suzie", age: 23 };
 
@@ -259,3 +259,64 @@ console.log(kk);
 // let str = newArray.join('<>');
 // console.log(str);
 
+
+
+// let i = 0;
+// while (i < 10) {
+
+//     console.log(i);
+//     i++;
+// }
+
+const toDos = [
+    {
+        id: 1,
+        text: "take a break",
+        result: true
+    },
+    {
+        id: 2,
+        text: "Learn English",
+        result: false
+    },
+    {
+        id: 3,
+        text: "Learn JS===",
+        result: true
+    }];
+
+for (let item of toDos) {
+
+    console.log(item.text);
+
+
+}
+
+let ids = toDos.map(function (item) {
+
+    return item.text;
+
+})
+console.log(ids);
+
+let done_array = toDos.filter(function (item) {
+    return item.result != true;
+
+
+})
+console.log(done_array);
+
+let totalLength = toDos.reduce(function (acumulator, currentItem) {
+    let textLen = currentItem.text.length;
+    return acumulator + textLen;
+}, 0);
+
+console.log(`Total ltngth of text:`, totalLength);
+
+
+for (item of toDos) {
+    if (!item.result) {
+        continue;
+    }
+    console.log(item.text + ' ' + item.result)
+}
