@@ -52,3 +52,30 @@ let totalLength = toDos.reduce((acumulator, currentItem) => {
 
 
 console.log(totalLength);
+//---------------------------------------Constructor---------------------
+
+function Person(firstName, lastName, age = 1, birthDate = "2025-12-01") {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+    this.birthDate = new Date(birthDate);
+
+    //metods
+    this.getfullName = function () {
+        return `${this.lastName} ${this.firstName}`;
+    }
+    this.addYear = function () {
+
+        newage = this.age++;
+        return age;
+
+    }
+
+
+}
+
+const user1 = new Person("Louis", "Jacklin", 22)
+console.log(user1.getfullName());
+
+console.log(`Age of ${user1.firstName} is ${user1.age}`);
+console.log(user1.addYear());
