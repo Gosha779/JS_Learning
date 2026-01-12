@@ -76,6 +76,5 @@ function Person(firstName, lastName, age = 1, birthDate = "2025-12-01") {
 
 const user1 = new Person("Louis", "Jacklin", 22)
 console.log(user1.getfullName());
-
 console.log(`Age of ${user1.firstName} is ${user1.age}`);
 console.log(user1.addYear());
